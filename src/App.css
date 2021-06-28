@@ -1,4 +1,7 @@
 .App {
+  display: grid;
+  grid: 5vw 1fr;
+  grid-template-areas: "sidebar main";
   text-align: center;
 }
 
