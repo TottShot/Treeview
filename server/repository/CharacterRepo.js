@@ -25,8 +25,7 @@ export function getCharacter() {
             request.query('select * from Character', function (err, recordset) {
                 if (err)
                     reject(err);
-                console.log(convertCharacterToGraphQLType(recordset.recordset[0]));
-                resolve(convertCharacterToGraphQLType(recordset.recordset[0]));
+                resolve(convertCharacterToGraphQLType(recordset?.recordset[0]));
             });
         });
     });
