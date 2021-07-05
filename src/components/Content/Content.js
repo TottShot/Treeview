@@ -1,7 +1,7 @@
 import { gql, useApolloClient } from '@apollo/client';
-import * as React from "react";
-import { SubContent } from "./SubContent";
-import { useSectionContext } from "../../contexts/SectionContext";
+import * as React from 'react';
+import { SubContent } from './SubContent';
+import { useSectionContext } from '../../contexts/SectionContext';
 
 const CONTENT = gql`
   query GetContents($id: ID!) {

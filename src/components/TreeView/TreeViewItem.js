@@ -1,5 +1,5 @@
-import * as React from "react";
-import { useTreeViewContext } from "./TreeViewContext";
+import * as React from 'react';
+import { useTreeViewContext } from './TreeViewContext';
 
 function MinusSquare(props) {
     return (
@@ -23,15 +23,15 @@ export function TreeViewItem({ node }) {
 
     if (Array.isArray(node.children) && node.children.length) {
         return <div
-            style={{ padding: "0 9px" }}
+            style={{ padding: '0 9px' }}
             key={node.id}>
             <i onClick={() => controlExpanded(node.id)}>{isExpanded ? <MinusSquare /> : <PlusSquare />}</i>
             <span
                 onClick={() => onNodeSelect(node.id)}
-                style={{ backgroundColor: selected === node.id ? "#aa73f3" : "inherit", paddingLeft: "6px", width: "90%" }}>
-                <p style={{ display: "inline-block", margin: "0" }}>{node.title}</p>
+                style={{ backgroundColor: selected === node.id ? '#aa73f3' : 'inherit', paddingLeft: '6px', width: '90%' }}>
+                <p style={{ display: 'inline-block', margin: '0' }}>{node.title}</p>
             </span>
-            <div style={{ paddingLeft: "16px" }}>
+            <div style={{ paddingLeft: '16px' }}>
                 {isExpanded ?
                     node.children.sort((a, b) => Number(a.ordering) - Number(b.ordering)).map((childNode) => <TreeViewItem key={childNode.id} node={childNode} />) :
                     null}
@@ -42,7 +42,7 @@ export function TreeViewItem({ node }) {
     return <div
         key={node.id}
         onClick={() => onNodeSelect(node.id)}
-        style={{ backgroundColor: selected === node.id ? "#aa73f3" : "inherit", margin: "0", padding: "0 9px", width: "90%" }}>
-        <p style={{ margin: "4px" }}>{node.title}</p>
+        style={{ backgroundColor: selected === node.id ? '#aa73f3' : 'inherit', margin: '0', padding: '0 9px', width: '90%' }}>
+        <p style={{ margin: '4px' }}>{node.title}</p>
     </div>
 }

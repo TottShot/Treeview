@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TreeViewProvider } from "./TreeViewContext";
+import { TreeViewProvider } from './TreeViewContext';
 
 export function TreeView({ children, onNodeSelect, selected}) {
     return <div>

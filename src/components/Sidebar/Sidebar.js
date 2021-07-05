@@ -1,7 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
-import * as React from "react";
+import * as React from 'react';
 import { TreeView, TreeViewItem } from '../TreeView';
-import { useSectionContext } from "../../contexts/SectionContext";
+import { useSectionContext } from '../../contexts/SectionContext';
 
 const TABLE_OF_CONTENTS = gql`
   query GetTOC {
@@ -23,9 +23,9 @@ export function Sidebar() {
     });
 
     return <div style={{
-        background: "#DDD",
-        gridArea: "sidebar",
-        paddingTop: "25px"
+        background: '#DDD',
+        gridArea: 'sidebar',
+        paddingTop: '25px'
     }}>
         {loading ? <p>Loading...</p> :
             error || !tree ? <p>Error</p> :
