@@ -33,7 +33,7 @@ export function TreeViewItem({ node }) {
             </span>
             <div style={{ paddingLeft: "16px" }}>
                 {isExpanded ?
-                    node.children.map((childNode) => <TreeViewItem key={childNode.id} node={childNode} />) :
+                    node.children.sort((a, b) => Number(a.ordering) - Number(b.ordering)).map((childNode) => <TreeViewItem key={childNode.id} node={childNode} />) :
                     null}
             </div>
         </div>

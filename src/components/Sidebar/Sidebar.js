@@ -33,7 +33,7 @@ export function Sidebar() {
                     onNodeSelect={setContentId}
                     selected={contentId ?? null}
                 >
-                    {tree.map((node) => <TreeViewItem key={node.id} node={node} />)}
+                    {tree.sort((a, b) => Number(a.ordering) - Number(b.ordering)).map((node) => <TreeViewItem key={node.id} node={node} />)}
                 </TreeView>}
     </div>
 

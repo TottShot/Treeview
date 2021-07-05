@@ -51,9 +51,9 @@ export function Content() {
     }, [contentId, client]);
 
     if (contentInfo.status === 'pending') {
-        return <div>Select a component to start</div>
+        return <div><p>Select a component to start</p></div>
     } else if (contentInfo.status === 'rejected') {
-        return <div>An error occured with loading</div>
+        return <div><p>An error occured with loading</p></div>
     }
 
     return (<div>
