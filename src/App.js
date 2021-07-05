@@ -1,20 +1,18 @@
+import * as React from "react";
 import './App.css';
-import API from "./api";
-import Sidebar from './Sidebar';
+import { Content } from './components/Content';
+import { Sidebar } from './components/Sidebar';
+import { SectionProvider } from './contexts/SectionContext';
 
 function App() {
   return (
     <div className="App">
-      <Sidebar />
-      <div>
-      <header className="App-header">
-        <p>
-          Welcome to Cirdan, a new DnD viewer.
-          For, feel free to sign up to be part of a beta.
-        </p>
-        <API />
-      </header>
-      </div>
+      <SectionProvider>
+        <Sidebar />
+        <main className="App-header">
+          <Content />
+        </main>
+      </SectionProvider>
     </div>
   );
 }
