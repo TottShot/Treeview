@@ -1,3 +1,3 @@
-This project contains the technical challenge for Propylon, written by Sean Totterdell.
+A simple treeview component, written as practice. 
 
 To get started, first run `npm install` and then run `npm run start`
